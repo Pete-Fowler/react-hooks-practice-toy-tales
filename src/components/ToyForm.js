@@ -23,14 +23,14 @@ function ToyForm({ addNewToy }) {
       body: JSON.stringify(toy),
     })
       .then(res => res.json())
-      .then(data => console.log(data));
+      .then(data => addNewToy(data));
   }
 
 console.log(formData);
 
   return (
-    <div className="container">
-      <form className="add-toy-form">
+    <div className="container">npm 
+      <form className="add-toy-form" onSubmit={addToy}>
         <h3>Create a toy!</h3>
         <input
           type="text"
@@ -55,7 +55,6 @@ console.log(formData);
           name="submit"
           value="Create New Toy"
           className="submit"
-          onSubmit={addToy}
         />
       </form>
     </div>
